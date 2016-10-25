@@ -1,12 +1,12 @@
-#gruen/phpcs
+# gruen/phpcs
 PHP Code Sniffer container
-##Usage
+## Usage
 
 ```shell
 docker run -i --rm \
     -v "$(pwd)":/sniff \
     --name phpcs_"$(date +%s%N)" \
-    dgruen/phpcs:testing "$@"
+    gruen/phpcs "$@"
 ```
 
 I use the ```"$(date +%s%N)"``` to prevent naming
