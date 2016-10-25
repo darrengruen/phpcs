@@ -1,4 +1,4 @@
-#dgruen/phpcs
+#gruen/phpcs
 PHP Code Sniffer container
 ##Usage
 
