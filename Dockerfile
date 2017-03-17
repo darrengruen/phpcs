@@ -1,10 +1,8 @@
 # PHPCS Docker container
-FROM ubuntu:16.04
-RUN apt-get update \
-    && apt-get install -y php \
-    php-cli \
-    php-pear \
-    curl
+# Docker Container for running PHPCS
+# Take a look at https://github.com/squizlabs/PHP_CodeSniffer
+FROM php:7.0-alpine
 RUN pear install PHP_CodeSniffer
-WORKDIR /sniff
+WORKDIR /app
 ENTRYPOINT [ "phpcs" ]
+CMD [ "--standard=PSR2", "/app" ]
